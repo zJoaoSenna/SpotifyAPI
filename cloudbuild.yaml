@@ -8,3 +8,7 @@ steps:
   - --trigger-http
   - --runtime=python37
   - --allow-unauthenticated
+  env:
+- 'CLOUDSDK_COMPUTE_REGION=southamerica-east1'
+- 'CLOUDSDK_COMPUTE_ZONE=southamerica-east1'
+  
