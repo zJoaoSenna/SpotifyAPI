@@ -10,5 +10,4 @@ steps:
   - --allow-unauthenticated
   env:
 - 'CLOUDSDK_COMPUTE_REGION=southamerica-east1'
-- 'CLOUDSDK_COMPUTE_ZONE=southamerica-east1'
   
