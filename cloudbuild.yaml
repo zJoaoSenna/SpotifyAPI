@@ -3,7 +3,7 @@ steps:
   args:
   - functions
   - deploy
-  - hello_worlddd
+  - featurestore_cambio
   - --source=.
   - --trigger-http
   - --runtime=python37
