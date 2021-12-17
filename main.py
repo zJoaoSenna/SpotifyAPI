@@ -32,7 +32,7 @@ def featurestore_cambio(request):
     bucket = storage_client.get_bucket('bronze-fine-blueprint-333917')
     blob = bucket.blob('historico_cambio_dolar_euro/'+'historico_cambio'+'_'+year+'.csv')
     
-    blob.upload_from_string(data="https://github.com/zJoaoSenna/SpotifyAPI.git")
+    blob.upload_from_string(data=urlData)
     
     #print(response.text)
     return '200'
