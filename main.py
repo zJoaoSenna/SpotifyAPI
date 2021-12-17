@@ -42,7 +42,7 @@ def featurestore_cambio(request):
     rawData.drop(['paridadeCompra', 'paridadeVenda','cotacaoCompra','cotacaoVenda'], axis='columns', inplace=True)
     rawData.drop(rawData.loc[rawData['tipoBoletim']!='Fechamento'].index, inplace=True)
 
-    #rawData.to_csv('s3://dat-platform-mig-s3-preprocessing-feature-store/historico_cambio_dolar_euro/'+'historico_cambio'+'_'+'2021'+'.csv',sep=";",index=False, encoding= "UTF-8",header=True)
+    
     df = rawData.to_csv(sep=";", index=False, encoding="UTF-8",header=True)
     
     storage_client = storage.Client()
