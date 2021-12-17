@@ -42,7 +42,7 @@ def featurestore_cambio(request):
     rawData.drop(['paridadeCompra', 'paridadeVenda','cotacaoCompra','cotacaoVenda'], axis='columns', inplace=True)
     rawData.drop(rawData.loc[rawData['tipoBoletim']!='Fechamento'].index, inplace=True)
 
-    
+    #oi
     df = rawData.to_csv(sep=";", index=False, encoding="UTF-8",header=True)
     
     storage_client = storage.Client()
