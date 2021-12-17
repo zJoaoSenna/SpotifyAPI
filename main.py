@@ -25,15 +25,16 @@ def featurestore_cambio(request):
     'Cookie': 'dtCookie=2FFEF66B3F660488D59A687751248155|cHRheHwx; BIGipServer~was-p_as3~was-p~pool_was-p_default_443=1020268972.47873.0000; JSESSIONID=0000E4TMoAjPS32kEA-6NF0AVla:1cn7m3fq4'
     }
 
-    response = requests.request("GET", url, headers=headers, data=payload)
-    df = response.to_csv(sep=";", index=False, encoding="UTF-8",header=True)
     
+   # df = url.to_csv(sep=";", index=False, encoding="UTF-8",header=True)
     storage_client = storage.Client()
     bucket = storage_client.get_bucket('bronze-fine-blueprint-333917')
     blob = bucket.blob('historico_cambio_dolar_euro/'+'historico_cambio'+'_'+year+'.csv')
     
-    blob.upload_from_string(data=df)
+    blob.upload_from_string(data=url)
     
     #print(response.text)
     return '200'
+
+featurestore_cambio({})
      
