@@ -36,5 +36,5 @@ def featurestore_cambio(request):
     #print(response.text)
     return '200'
 
-featurestore_cambio({})
+
      
